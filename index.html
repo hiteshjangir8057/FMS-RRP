@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMS RRP Calculation - PRO</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --border: #cbd5e1;
+        }
+
+        * { box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { margin: 0; background: var(--bg); color: #1e293b; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+        /* Top Navbar */
+        .navbar {
+            background: var(--primary); color: white; padding: 12px 20px;
+            display: flex; justify-content: space-between; align-items: center; z-index: 100;
+        }
+        .navbar h1 { margin: 0; font-size: 1.1rem; font-weight: 800; }
+
+        .nav-tools { display: flex; gap: 10px; align-items: center; }
+        .stats { background: #2563eb; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 800; }
+        .g-search { padding: 8px 12px; border-radius: 8px; border: none; font-size: 14px; width: 250px; font-weight: 700; outline: none; }
+
+        /* Filter Bar */
+        .filter-bar {
+            background: white; padding: 15px 20px; border-bottom: 2px solid var(--border);
+            display: flex; flex-wrap: wrap; gap: 20px; align-items: center;
+        }
+
+        .f-item { display: flex; flex-direction: column; gap: 5px; }
+        .f-item label { font-size: 11px; font-weight: 800; color: #64748b; text-transform: uppercase; }
+        
+        select, input[type="date"] {
+            padding: 8px 12px; border-radius: 8px; border: 2px solid var(--border);
+            font-weight: 700; outline: none; font-size: 13px; background: #ffffff;
+        }
+
+        .btn {
+            padding: 10px 18px; border-radius: 8px; border: none; 
+            font-weight: 800; font-size: 13px; cursor: pointer; transition: 0.2s;
+        }
+        .btn-apply { background: var(--accent); color: white; }
+        .btn-reset { background: #ef4444; color: white; }
+
+        /* Table Section */
+        .table-area { flex: 1; padding: 15px; overflow: hidden; display: flex; }
+        .table-wrap { 
+            background: white; border-radius: 12px; flex: 1;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.1); border: 1px solid var(--border);
+            overflow: auto; 
+        }
+
+        table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 1200px; }
+        thead { position: sticky; top: 0; z-index: 50; }
+        th { 
+            background: #f1f5f9; color: var(--primary); padding: 15px 12px;
+            font-size: 12px; font-weight: 800; text-transform: uppercase;
+            border-bottom: 2px solid var(--border); border-right: 1px solid var(--border);
+            text-align: left;
+        }
+
+        td { 
+            padding: 12px; font-size: 14px; font-weight: 700; /* Super Bold Text */
+            border-bottom: 1px solid var(--border); border-right: 1px solid var(--border);
+            color: #1e293b; white-space: nowrap;
+        }
+        tr:hover td { background: #f1f5f9; }
+
+        .btn-visit { 
+            padding: 6px 12px; border-radius: 6px; text-decoration: none;
+            font-size: 11px; font-weight: 800; background: #eff6ff; color: #2563eb;
+            border: 1px solid #bfdbfe; display: inline-block;
+        }
+
+        #loading-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: white; display: flex; justify-content: center; align-items: center;
+            z-index: 2000; font-weight: 800; color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .filter-bar { flex-direction: column; align-items: stretch; }
+            .g-search { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading-overlay">डाटा लोड हो रहा है, कृपया रुकें...</div>
+
+    <nav class="navbar">
+        <h1>FMS RRP CALCULATION</h1>
+        <div class="nav-tools">
+            <div class="stats" id="rowCount">Records: 0</div>
+            <input type="text" id="globalSearch" class="g-search" placeholder="Search data...">
+            <button class="btn btn-reset" onclick="resetAll()">RESET ALL</button>
+        </div>
+    </nav>
+
+    <div class="filter-bar">
+        <div class="f-item">
+            <label>1. Select Date Column</label>
+            <select id="dateColSelect"></select>
+        </div>
+
+        <div class="f-item">
+            <label>2. Month Filter</label>
+            <select id="monthSelect" onchange="filterData()">
+                <option value="">-- All Months --</option>
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+            </select>
+        </div>
+
+        <div class="f-item">
+            <label>3. Custom Range</label>
+            <div style="display:flex; gap:8px;">
+                <input type="date" id="fromDate">
+                <input type="date" id="toDate">
+                <button class="btn btn-apply" onclick="filterData()">APPLY</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-area">
+        <div class="table-wrap">
+            <table id="mainTable">
+                <thead><tr id="tableHead"></tr></thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Cache Busting: URL के पीछे टाइमस्टैम्प जोड़ा ताकि GitHub ब्लॉक न करे
+        const rawUrl = "https://raw.githubusercontent.com/hiteshjangir8057/FMS-RRP/main/1-4000.xlsx?t=" + new Date().getTime();
+        
+        let originalData = [];
+        let headers = [];
+
+        async function loadData() {
+            try {
+                const res = await fetch(rawUrl);
+                if (!res.ok) throw new Error("Fetch Error");
+
+                const ab = await res.arrayBuffer();
+                const wb = XLSX.read(ab, { type: 'array' });
+                const ws = wb.Sheets[wb.SheetNames[0]];
+                const rows = XLSX.utils.sheet_to_json(ws, { header: 1 });
+
+                if (rows.length > 0) {
+                    headers = rows[0];
+                    originalData = rows.slice(1);
+                    
+                    // UI तैयार करें
+                    setupUI();
+                    // सबसे पहले सारा डाटा दिखाएं
+                    renderTable(originalData);
+                }
+                document.getElementById('loading-overlay').style.display = 'none';
+            } catch (err) {
+                document.getElementById('loading-overlay').innerHTML = "<span style='color:red'>सर्वर से संपर्क नहीं हो पाया। कृपया पेज रिफ्रेश करें।</span>";
+                console.error(err);
+            }
+        }
+
+        function setupUI() {
+            const headTr = document.getElementById('tableHead');
+            const colSelect = document.getElementById('dateColSelect');
+            
+            headTr.innerHTML = headers.map(h => `<th>${h || ""}</th>`).join('');
+            
+            headers.forEach((h, i) => {
+                const name = String(h).toUpperCase();
+                if (name.includes("DATE") || name.includes("DELIVERY")) {
+                    let opt = document.createElement('option');
+                    opt.value = i;
+                    opt.innerText = h;
+                    colSelect.appendChild(opt);
+                }
+            });
+        }
+
+        // एक्सेल डेट को सही फॉर्मेट में बदलने का फंक्शन
+        function toDate(val) {
+            if (!val) return null;
+            if (val instanceof Date) return val;
+            if (!isNaN(val)) return new Date((val - 25569) * 86400 * 1000);
+            const p = String(val).split('-');
+            if (p.length === 3) return new Date(p[2], p[1]-1, p[0]);
+            return new Date(val);
+        }
+
+        function renderTable(data) {
+            const tbody = document.getElementById('tableBody');
+            let html = "";
+            
+            data.forEach(row => {
+                html += "<tr>";
+                headers.forEach((h, i) => {
+                    let cell = row[i] || "";
+                    
+                    // डेट डिस्प्ले फिक्स
+                    if (String(headers[i]).toUpperCase().includes("DATE") && cell !== "") {
+                        const d = toDate(cell);
+                        if (d && !isNaN(d)) cell = d.toLocaleDateString('en-GB').replace(/\//g, '-');
+                    }
+                    
+                    if (String(h).toUpperCase() === "LINK" && cell !== "") {
+                        html += `<td><a href="${cell}" target="_blank" class="btn-visit">VISIT</a></td>`;
+                    } else {
+                        html += `<td>${cell}</td>`;
+                    }
+                });
+                html += "</tr>";
+            });
+            
+            tbody.innerHTML = html || "<tr><td colspan='20' style='text-align:center'>कोई डाटा नहीं मिला</td></tr>";
+            document.getElementById('rowCount').innerText = `Records: ${data.length}`;
+        }
+
+        // Combined Filter (Month + Range + Search)
+        function filterData() {
+            const month = document.getElementById('monthSelect').value;
+            const from = document.getElementById('fromDate').value ? new Date(document.getElementById('fromDate').value) : null;
+            const to = document.getElementById('toDate').value ? new Date(document.getElementById('toDate').value) : null;
+            const colIdx = document.getElementById('dateColSelect').value;
+            const search = document.getElementById('globalSearch').value.toLowerCase();
+
+            const filtered = originalData.filter(row => {
+                // Global Search check
+                const matchSearch = row.some(c => String(c).toLowerCase().includes(search));
+                if (!matchSearch) return false;
+
+                // Date Filter check
+                const d = toDate(row[colIdx]);
+                
+                // Month Filter
+                if (month !== "" && (!d || d.getMonth() != month)) return false;
+
+                // Range Filter
+                if (from && to) {
+                    from.setHours(0,0,0,0);
+                    to.setHours(23,59,59,999);
+                    if (!d || d < from || d > to) return false;
+                }
+
+                return true;
+            });
+
+            renderTable(filtered);
+        }
+
+        // Search Input Event
+        document.getElementById('globalSearch').addEventListener('input', filterData);
+
+        function resetAll() {
+            document.getElementById('globalSearch').value = "";
+            document.getElementById('monthSelect').value = "";
+            document.getElementById('fromDate').value = "";
+            document.getElementById('toDate').value = "";
+            renderTable(originalData);
+        }
+
+        loadData();
+    </script>
+</body>
+</html>
