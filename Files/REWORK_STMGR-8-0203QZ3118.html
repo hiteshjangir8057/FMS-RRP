@@ -1,0 +1,64 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>FMS | RRP Cost Sheet</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet"> <style> * {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+  
+.column {
+  float: left;
+  padding: 5px;
+  width:100%;
+}
+.column-right {
+  float: right;
+  padding: 5px;
+  width:50%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 5px;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+@media  print {
+    /* Default to A4 size */
+    @page  {
+        size: A3;
+        margin: 1mm;
+    }
+
+    /* If printing to A3 */
+    /*@media  print and (min-width: 297mm) {*/
+    /*    @page  {*/
+    /*        size: A3;*/
+    /*        margin: 1mm;*/
+    /*    }*/
+    /*}*/
+} </style> </head> <body> <div style=" width : 100%; border: 1px solid #000; padding:12px;"> <h4 style="text-align: center; margin: 5px 0;">COST SHEET </h4> <!-- table 1 start --> <table style="width: 100%; border: 0px solid #fff !important;"> <tr> <td style="width: 25%; border: 0px solid #fff !important;"> <!-- table 2 start --> <table> <tbody> <tr> <th style="text-align: center;">SOFA</th> </tr> <tr> <td style="background:#fff;"> <img class="img-fluid" src="https://fms.techiesquad.in/public/image/20260206055851.png" alt="Card image cap" width="350" height="240" style="object-fit: scale-down;"> </td> </tr> <tr> <th style="text-align: center;">REWORK.STMGR-8-0203</th> </tr> </tbody> </table> <!-- table 2 end --> </td> <td style="width: 75%; border: 0px solid #fff !important;"> <!-- table 3 start --> <table> <tbody> <tr> <th>Model No</th> <th>REWORK.STMGR-8-0203</th> </tr> <tr> <td>PRODUCTION ID</td> <td>REWORK.STMGR-8-0203QZ3118</td> </tr> <tr> <td>ITEM NAME</td> <td>SOFA</td> </tr> <tr> <td>START DATE</td> <td>01-02-2026</td> </tr> <tr> <td>DATE OF DELIVERY</td> <td>28-02-2026</td> </tr> <tr> <td>COMPLETE DATE</td> <td>26-02-2026</td> </tr> <tr> <td>QTY</td> <td>1.00</td> </tr> <tr> <td>PER UNIT </td> <td> 0 </td> </tr> <tr> <td>Customer Name</td> <td>STMGR-8</td> </tr> <tr> <td>Product Type</td> <td>REPAIR</td> </tr> <tr> <td>Store/Dealer</td> <td>STORI</td> </tr> <tr> <td>GRADE</td> <td>SOFA</td> </tr> </tbody> </table> <!-- table 3 end --> </td> </tr> </table> <!-- table 1 end --> <!-- table 4 start --> <table> <tr> <th style="text-align: center;">MATERIAL USED</th> <th style="text-align: center;">&nbsp;</th> </tr> <tr style="background-color: #fff;"> <td> <!-- Table 5 start --> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">PACKING </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>Corrugated Roll 140/120 GRAMES ( GATTA )</td> <td>35</td> <td>42.5</td> <td>1487.5</td> </tr> <tr> <td>EP FOAM 5MM MTR</td> <td>14</td> <td>24.38</td> <td>341.32</td> </tr> <tr> <td>Packing Tape 2&quot;</td> <td>5</td> <td>28</td> <td>140</td> </tr> <tr> <td>Stretch Film 18 INCH</td> <td>150</td> <td>170</td> <td>25500</td> </tr> <tr> <td>EP FOAM CORNER  45X45X15</td> <td>14</td> <td>42</td> <td>588</td> </tr> <tr> <td>GATA L CORNER-50X50X4MM</td> <td>14</td> <td>16.2</td> <td>226.8</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>28283.62</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">HARDWARE </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>PENCIL</td> <td>1</td> <td>25</td> <td>25</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>25</th> </tr> </table> </td> <td style="vertical-align: top;"> <!-- Table 0010 start --> <table> <tr style="background-color: #fff;"> <th colspan="5" style="text-align: center;">LABOUR COST DEPARTMENT WISE</th> </tr> <tr> <th>DEPARTMENT</th> <th>NO.OF DAYS</th> <th>TOTAL</th> </tr> <tr> <td>PAINT</td> <td>3.5</td> <td>3305</td> </tr> <tr> <td>ASSEMBLEY</td> <td>1</td> <td>750</td> </tr> <tr> <th colspan="2" style="text-align:right">TOTAL</th> <th>4055</th> </tr> </table> <!-- Table 0010 end --> <!-- Table 10 start --> <table style="margin-top: 20px";> <tr style="background-color: #fff;"> <th colspan="5" style="text-align: center;">LABOUR COST </th> </tr> <tr> <th>DEPARTMENT</th> <th>TEAM</th> <th>PAY PER DAY</th> <th>NO. OF DAYS</th> <th>TOTAL</th> </tr> <tr> <td>PAINT</td> <td>ASHOK KUMAR-2-586</td> <td>1304.00</td> <td>1</td> <td>1304</td> </tr> <tr> <td>PAINT</td> <td>SHATRUGHAN CHAURASIA-893</td> <td>696.00</td> <td>1.5</td> <td>1044</td> </tr> <tr> <td>PAINT</td> <td>MANISH-32</td> <td>957.00</td> <td>0.5</td> <td>478.5</td> </tr> <tr> <td>PAINT</td> <td>MAHESH GUPTA-376</td> <td>957.00</td> <td>0.5</td> <td>478.5</td> </tr> <tr> <td>ASSEMBLEY</td> <td>DILIP VISHWAKARMA-989</td> <td>717.00</td> <td>0.5</td> <td>358.5</td> </tr> <tr> <td>ASSEMBLEY</td> <td>SATYNARAYN SHARMA-1024</td> <td>783.00</td> <td>0.5</td> <td>391.5</td> </tr> <tr> <th colspan="4" style="text-align:right">TOTAL</th> <th>4055</th> </tr> </table> <!-- Table 10 end --> <!-- Table 11 start --> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">MATERIAL COST </td> </tr> <tr> <th>CATEGORY</th> <th>QTY</th> <th>AMOUNT</th> </tr> <tr> <td>PRINTING AND STATIONERY</td> <td>1</td> <td>25</td> </tr> <tr> <td>PACKING MATERIAL</td> <td>232</td> <td>28284</td> </tr> <tr> <th colspan="2" style="text-align:right">TOTAL</th> <th>28308.62</th> </tr> </table> <!-- Table 11 end --> <!-- Table 12 start --> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">RRP CALCULATION </td> </tr> <tr> <td STYLE="text-align: center;">MATERIAL COST + ADDITION(0)</td> <td style="text-align: center;">28308.62 </td> </tr> <tr> <td STYLE="text-align: center;">LABOUR CHARGE + ADDITION(0)</td> <td style="text-align: center;">4055</td> </tr> <tr> <td STYLE="text-align: center;">SUB TOTAL </td> <td style="text-align: center;">32363.62</td> </tr> <tr> <td STYLE="text-align: center;">COSTING WITH OVER HEAD</td> <td style="text-align: center;"> 0 </td> </tr> <tr> <td STYLE="text-align: center;">COSTING WITH PROFIT</td> <td style="text-align: center;"> 0 </td> </tr> <tr> <td STYLE="text-align: center;">TOTAL </td> <td style="text-align: center;"> 0 </td> </tr> </table> <!-- Table 12 end --> </td> </tr> </table> </div> </body> </html> 
