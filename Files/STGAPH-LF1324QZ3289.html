@@ -1,0 +1,64 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>FMS | RRP Cost Sheet</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet"> <style> * {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+  
+.column {
+  float: left;
+  padding: 5px;
+  width:100%;
+}
+.column-right {
+  float: right;
+  padding: 5px;
+  width:50%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 5px;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+@media  print {
+    /* Default to A4 size */
+    @page  {
+        size: A3;
+        margin: 1mm;
+    }
+
+    /* If printing to A3 */
+    /*@media  print and (min-width: 297mm) {*/
+    /*    @page  {*/
+    /*        size: A3;*/
+    /*        margin: 1mm;*/
+    /*    }*/
+    /*}*/
+} </style> </head> <body> <div style=" width : 100%; border: 1px solid #000; padding:12px;"> <h4 style="text-align: center; margin: 5px 0;">COST SHEET </h4> <!-- table 1 start --> <table style="width: 100%; border: 0px solid #fff !important;"> <tr> <td style="width: 25%; border: 0px solid #fff !important;"> <!-- table 2 start --> <table> <tbody> <tr> <th style="text-align: center;">BED SIDE TABLE</th> </tr> <tr> <td style="background:#fff;"> <img class="img-fluid" src="https://fms.techiesquad.in/public/image/20260323114435.jpg" alt="Card image cap" width="350" height="240" style="object-fit: scale-down;"> </td> </tr> <tr> <th style="text-align: center;">STGAPH-LF1324</th> </tr> </tbody> </table> <!-- table 2 end --> </td> <td style="width: 75%; border: 0px solid #fff !important;"> <!-- table 3 start --> <table> <tbody> <tr> <th>Model No</th> <th>STGAPH-LF1324</th> </tr> <tr> <td>PRODUCTION ID</td> <td>STGAPH-LF1324QZ3289</td> </tr> <tr> <td>ITEM NAME</td> <td>BED SIDE TABLE</td> </tr> <tr> <td>START DATE</td> <td>23-03-2026</td> </tr> <tr> <td>DATE OF DELIVERY</td> <td>23-04-2026</td> </tr> <tr> <td>COMPLETE DATE</td> <td></td> </tr> <tr> <td>QTY</td> <td>2.00</td> </tr> <tr> <td>PER UNIT </td> <td> 0 </td> </tr> <tr> <td>Customer Name</td> <td>STORI</td> </tr> <tr> <td>Product Type</td> <td>ORDER</td> </tr> <tr> <td>Store/Dealer</td> <td>STORI</td> </tr> <tr> <td>GRADE</td> <td>BED SIDE TABLE</td> </tr> </tbody> </table> <!-- table 3 end --> </td> </tr> </table> <!-- table 1 end --> <!-- table 4 start --> <table> <tr> <th style="text-align: center;">MATERIAL USED</th> <th style="text-align: center;">&nbsp;</th> </tr> <tr style="background-color: #fff;"> <td> <!-- Table 5 start --> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">VENNER </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>1MM PAPER VENEER WHITE ASH QTR 8X4</td> <td>1</td> <td>2563.2</td> <td>2563.2</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>2563.2</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">PLY-BOARD </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>7.5MM MDF BOARD CENTURY EXTERIOR GRADE 8X4FT</td> <td>2</td> <td>803.4</td> <td>1606.8</td> </tr> <tr> <td>25MM MDF BOARD CENTURY EXTERIOR GRADE 8X4FT</td> <td>2</td> <td>2942.23</td> <td>5884.46</td> </tr> <tr> <td>16MM CALIBRATED PLYWOOD 8X4F</td> <td>3</td> <td>2130.72</td> <td>6392.16</td> </tr> <tr> <td>Marino Marine Board -18mm</td> <td>3</td> <td>2169.6</td> <td>6508.8</td> </tr> <tr> <td>Marino Marine Board - 12mm</td> <td>6</td> <td>1492.74</td> <td>8956.44</td> </tr> <tr> <td>PINE WOOD SYT REGULOR</td> <td>2</td> <td>940</td> <td>1880</td> </tr> <tr> <td>5.5MM MDF BOARD CENTURY EXTERIOR GRADE 8X4FT</td> <td>1</td> <td>653.43</td> <td>653.43</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>31882.09</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">ELECTRICAL </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>LED DRIVER 10AMP ADOPTER</td> <td>1</td> <td>440</td> <td>440</td> </tr> <tr> <td>G20 LED WIRE 2 CORE</td> <td>10</td> <td>5</td> <td>50</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>490</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">HARDWARE </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>Pro Lift Bed Fitting-PLBFEFE 30</td> <td>1</td> <td>1688.32</td> <td>1688.32</td> </tr> <tr> <td>SOCKER FOR BED 2000 N</td> <td>1</td> <td>611</td> <td>611</td> </tr> <tr> <td>DOWEL 6X30 DP630 WOODEN</td> <td>20</td> <td>0.66</td> <td>13.2</td> </tr> <tr> <td>Star Bit (TAPARIA)</td> <td>1</td> <td>30</td> <td>30</td> </tr> <tr> <td>Hss Drill Bit 3MM</td> <td>1</td> <td>22.06</td> <td>22.06</td> </tr> <tr> <td>QUADRO S/C HETTICH 300 MM SILENT</td> <td>2</td> <td>1033.2</td> <td>2066.4</td> </tr> <tr> <td>Pvc Gitti-8x50mm</td> <td>50</td> <td>0.8</td> <td>40</td> </tr> <tr> <td>HOUSING MF 12</td> <td>50</td> <td>5.21</td> <td>260.5</td> </tr> <tr> <td>M6 DOWEL PVC GITTY FOR (MINIFIX) MFD608</td> <td>50</td> <td>0.57</td> <td>28.5</td> </tr> <tr> <td>M6 SCREW-ECO (MINIFIX)</td> <td>50</td> <td>1.87</td> <td>93.5</td> </tr> <tr> <td>Led Profile 12 MM WHITE</td> <td>2</td> <td>336.84</td> <td>673.68</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>5527.16</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">CONSUMABLES  ITEMS </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>SCREW MALE FEMALE 35 MM</td> <td>12</td> <td>5</td> <td>60</td> </tr> <tr> <td>BED BOLT WITH NUT 6x75</td> <td>6</td> <td>8</td> <td>48</td> </tr> <tr> <td>Masking Tape 1</td> <td>6</td> <td>17</td> <td>102</td> </tr> <tr> <td>FACE MASK</td> <td>5</td> <td>1.5</td> <td>7.5</td> </tr> <tr> <td>CUTTING WHEEL 4 XTRAPOWER</td> <td>6</td> <td>9.5</td> <td>57</td> </tr> <tr> <td>Grinding Dis 4x80 XTRAPOWER</td> <td>3</td> <td>30</td> <td>90</td> </tr> <tr> <td>DHOTI WHITE</td> <td>1</td> <td>17</td> <td>17</td> </tr> <tr> <td>Heatex Fevicol</td> <td>1</td> <td>410</td> <td>410</td> </tr> <tr> <td>LANCER BELT 120 NO REGMAR</td> <td>1</td> <td>72</td> <td>72</td> </tr> <tr> <td>LANCER BELT 80 NO REGMAR</td> <td>1</td> <td>70</td> <td>70</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>933.5</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">LAMINATES </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>LAMINATE 56147 SF MERINO 8x4</td> <td>1</td> <td>650</td> <td>650</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>650</th> </tr> </table> </td> <td style="vertical-align: top;"> <!-- Table 0010 start --> <table> <tr style="background-color: #fff;"> <th colspan="5" style="text-align: center;">LABOUR COST DEPARTMENT WISE</th> </tr> <tr> <th>DEPARTMENT</th> <th>NO.OF DAYS</th> <th>TOTAL</th> </tr> <tr> <td>CARPENTERY</td> <td>12.5</td> <td>12388.5</td> </tr> <tr> <td>PAINT</td> <td>2.5</td> <td>2698.76</td> </tr> <tr> <td>MARBLE CONTRACTOR</td> <td>1</td> <td>1860</td> </tr> <tr> <th colspan="2" style="text-align:right">TOTAL</th> <th>16947.26</th> </tr> </table> <!-- Table 0010 end --> <!-- Table 10 start --> <table style="margin-top: 20px";> <tr style="background-color: #fff;"> <th colspan="5" style="text-align: center;">LABOUR COST </th> </tr> <tr> <th>DEPARTMENT</th> <th>TEAM</th> <th>PAY PER DAY</th> <th>NO. OF DAYS</th> <th>TOTAL</th> </tr> <tr> <td>CARPENTERY</td> <td>YOGENDERA SHARMA-674</td> <td>1456.00</td> <td>1</td> <td>1456</td> </tr> <tr> <td>CARPENTERY</td> <td>SATYENDER SHARMA-979</td> <td>870.00</td> <td>0.5</td> <td>435</td> </tr> <tr> <td>METEL FITTER</td> <td>ARJUN PANDAY-1044</td> <td>1478.00</td> <td>1</td> <td>1478</td> </tr> <tr> <td>METEL FITTER</td> <td>RAMESH YADAV-994</td> <td>935.00</td> <td>1.5</td> <td>1402.5</td> </tr> <tr> <td>CARPENTERY</td> <td>PINKU SHARMA-1037</td> <td>1130.00</td> <td>2</td> <td>2260</td> </tr> <tr> <td>CARPENTERY</td> <td>KAMLESH KUMAR-1038</td> <td>739.00</td> <td>1</td> <td>739</td> </tr> <tr> <td>CARPENTERY</td> <td>BRIJESH-458</td> <td>1130.00</td> <td>1.5</td> <td>1695</td> </tr> <tr> <td>CARPENTERY</td> <td>MANOJ SHARMA-422</td> <td>913.00</td> <td>2</td> <td>1826</td> </tr> <tr> <td>CARPENTERY</td> <td>ANISH-488</td> <td>891.00</td> <td>2</td> <td>1782</td> </tr> <tr> <td>PAINT</td> <td>SATYADEV-527</td> <td>1022.00</td> <td>1</td> <td>1022</td> </tr> <tr> <td>PAINT</td> <td>RAJENDER KUMAR-42</td> <td>1196.00</td> <td>1</td> <td>1196</td> </tr> <tr> <td>MARBLE CONTRACTOR</td> <td>RAJ KUMAR (MARBLE CONTRACTOR ) (2)</td> <td>1860.00</td> <td>1</td> <td>1860</td> </tr> <tr> <td>CARPENTERY</td> <td>RAVI SHARMA-978</td> <td>1000.00</td> <td>0.5</td> <td>500</td> </tr> <tr> <td>CARPENTERY</td> <td>ANKIT KUMAR-1039</td> <td>652.00</td> <td>0.5</td> <td>326</td> </tr> <tr> <td>CARPENTERY</td> <td>VINAY KUMAR-632</td> <td>913.00</td> <td>0.5</td> <td>456.5</td> </tr> <tr> <td>METAL  POLISH</td> <td>DEEPAK-1079</td> <td>1000.00</td> <td>0.5</td> <td>500</td> </tr> <tr> <td>CARPENTERY</td> <td>ALOK KUMAR-1076</td> <td>913.00</td> <td>1</td> <td>913</td> </tr> <tr> <td>PAINT</td> <td>MD YUSUF-1082</td> <td>961.52</td> <td>0.5</td> <td>480.76</td> </tr> <tr> <th colspan="4" style="text-align:right">TOTAL</th> <th>20327.76</th> </tr> </table> <!-- Table 10 end --> <!-- Table 11 start --> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">MATERIAL COST </td> </tr> <tr> <th>CATEGORY</th> <th>QTY</th> <th>AMOUNT</th> </tr> <tr> <td>PLY-BOARD</td> <td>15</td> <td>24118</td> </tr> <tr> <td>PLY-BOARD</td> <td>4</td> <td>7764</td> </tr> <tr> <td>HARDWARE</td> <td>228</td> <td>5527</td> </tr> <tr> <td>CONSUMABLES</td> <td>36</td> <td>832</td> </tr> <tr> <td>LAMINATES</td> <td>1</td> <td>650</td> </tr> <tr> <td>CONSUMABLES</td> <td>6</td> <td>102</td> </tr> <tr> <td>ELECTRICAL ITEMS</td> <td>11</td> <td>490</td> </tr> <tr> <td>VENEER</td> <td>1</td> <td>2563</td> </tr> <tr> <th colspan="2" style="text-align:right">TOTAL</th> <th>42045.95</th> </tr> </table> <!-- Table 11 end --> <!-- Table 12 start --> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">RRP CALCULATION </td> </tr> <tr> <td STYLE="text-align: center;">MATERIAL COST + ADDITION(0)</td> <td style="text-align: center;">42045.95 </td> </tr> <tr> <td STYLE="text-align: center;">LABOUR CHARGE + ADDITION(0)</td> <td style="text-align: center;">20327.76</td> </tr> <tr> <td STYLE="text-align: center;">SUB TOTAL </td> <td style="text-align: center;">62373.71</td> </tr> <tr> <td STYLE="text-align: center;">COSTING WITH OVER HEAD</td> <td style="text-align: center;"> 0 </td> </tr> <tr> <td STYLE="text-align: center;">COSTING WITH PROFIT</td> <td style="text-align: center;"> 0 </td> </tr> <tr> <td STYLE="text-align: center;">TOTAL </td> <td style="text-align: center;"> 0 </td> </tr> </table> <!-- Table 12 end --> </td> </tr> </table> </div> </body> </html> 
