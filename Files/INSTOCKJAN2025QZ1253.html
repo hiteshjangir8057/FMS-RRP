@@ -1,0 +1,64 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>FMS | RRP Cost Sheet</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet"> <style> * {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+  
+.column {
+  float: left;
+  padding: 5px;
+  width:100%;
+}
+.column-right {
+  float: right;
+  padding: 5px;
+  width:50%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 5px;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+@media  print {
+    /* Default to A4 size */
+    @page  {
+        size: A3;
+        margin: 1mm;
+    }
+
+    /* If printing to A3 */
+    /*@media  print and (min-width: 297mm) {*/
+    /*    @page  {*/
+    /*        size: A3;*/
+    /*        margin: 1mm;*/
+    /*    }*/
+    /*}*/
+} </style> </head> <body> <div style=" width : 100%; border: 1px solid #000; padding:12px;"> <h4 style="text-align: center; margin: 5px 0;">COST SHEET </h4> <!-- table 1 start --> <table style="width: 100%; border: 0px solid #fff !important;"> <tr> <td style="width: 25%; border: 0px solid #fff !important;"> <!-- table 2 start --> <table> <tbody> <tr> <th style="text-align: center;">INSTOCKJAN2025</th> </tr> <tr> <td style="background:#fff;"> <img class="img-fluid" src="https://fms.techiesquad.in/backend/assets/images/no_image.png" alt="Card image cap" width="350" height="240" style="object-fit: scale-down;"> </td> </tr> <tr> <th style="text-align: center;">INSTOCKJAN2025</th> </tr> </tbody> </table> <!-- table 2 end --> </td> <td style="width: 75%; border: 0px solid #fff !important;"> <!-- table 3 start --> <table> <tbody> <tr> <th>Model No</th> <th>INSTOCKJAN2025</th> </tr> <tr> <td>PRODUCTION ID</td> <td>INSTOCKJAN2025QZ1253</td> </tr> <tr> <td>ITEM NAME</td> <td>INSTOCKJAN2025</td> </tr> <tr> <td>START DATE</td> <td>18-01-2025</td> </tr> <tr> <td>DATE OF DELIVERY</td> <td>31-01-2025</td> </tr> <tr> <td>COMPLETE DATE</td> <td>08-02-2025</td> </tr> <tr> <td>QTY</td> <td>1.00</td> </tr> <tr> <td>PER UNIT </td> <td> 0 </td> </tr> <tr> <td>Customer Name</td> <td>OZAR</td> </tr> <tr> <td>Product Type</td> <td>ORDER</td> </tr> <tr> <td>Store/Dealer</td> <td>INTERIAH</td> </tr> <tr> <td>GRADE</td> <td>INETRIAH</td> </tr> </tbody> </table> <!-- table 3 end --> </td> </tr> </table> <!-- table 1 end --> <!-- table 4 start --> <table> <tr> <th style="text-align: center;">MATERIAL USED</th> <th style="text-align: center;">&nbsp;</th> </tr> <tr style="background-color: #fff;"> <td> <!-- Table 5 start --> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">UPHOLSTERY </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>Black Markin</td> <td>10</td> <td>75</td> <td>750</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>750</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">CONSUMABLES  ITEMS </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>Bostic SR 505</td> <td>8</td> <td>255</td> <td>2040</td> </tr> <tr> <td>STAPLER PIN 80/10 WHITE</td> <td>1</td> <td>0.32</td> <td>0.32</td> </tr> <tr> <td>POLY FILLROLL 1500X25MM</td> <td>8</td> <td>111.15</td> <td>889.2</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>2929.52</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">FOAM ( UPHOLSTORY ) </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>6 MM WALL FOAM 60D BLACK</td> <td>3</td> <td>350</td> <td>1050</td> </tr> <tr> <td>12MM WALL FOAM 60D WHITE</td> <td>3</td> <td>380</td> <td>1140</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>2190</th> </tr> </table> </td> <td style="vertical-align: top;"> <!-- Table 0010 start --> <table> <tr style="background-color: #fff;"> <th colspan="5" style="text-align: center;">LABOUR COST DEPARTMENT WISE</th> </tr> <tr> <th>DEPARTMENT</th> <th>NO.OF DAYS</th> <th>TOTAL</th> </tr> <tr> <td>UPHOLSTERY</td> <td>12</td> <td>8866.81</td> </tr> <tr> <th colspan="2" style="text-align:right">TOTAL</th> <th>8866.81</th> </tr> </table> <!-- Table 0010 end --> <!-- Table 10 start --> <table style="margin-top: 20px";> <tr style="background-color: #fff;"> <th colspan="5" style="text-align: center;">LABOUR COST </th> </tr> <tr> <th>DEPARTMENT</th> <th>TEAM</th> <th>PAY PER DAY</th> <th>NO. OF DAYS</th> <th>TOTAL</th> </tr> <tr> <td>UPHOLSTERY</td> <td>PRADEEP KUMAR KUSHWAHA-645</td> <td>739.13</td> <td>2.5</td> <td>1847.83</td> </tr> <tr> <td>UPHOLSTERY</td> <td>SHER SINGH-646</td> <td>521.73</td> <td>2</td> <td>1043.46</td> </tr> <tr> <td>UPHOLSTERY</td> <td>DHARMENDER-805</td> <td>1130.00</td> <td>2</td> <td>2260</td> </tr> <tr> <td>UPHOLSTERY</td> <td>UDAY VEER-799</td> <td>1086.95</td> <td>1.5</td> <td>1630.43</td> </tr> <tr> <td>UPHOLSTERY</td> <td>AMAN-747</td> <td>521.00</td> <td>2.5</td> <td>1302.5</td> </tr> <tr> <td>UPHOLSTERY</td> <td>KARAN -681</td> <td>521.73</td> <td>1.5</td> <td>782.6</td> </tr> <tr> <th colspan="4" style="text-align:right">TOTAL</th> <th>8866.81</th> </tr> </table> <!-- Table 10 end --> <!-- Table 11 start --> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">MATERIAL COST </td> </tr> <tr> <th>CATEGORY</th> <th>QTY</th> <th>AMOUNT</th> </tr> <tr> <td>FABRIC</td> <td>10</td> <td>750</td> </tr> <tr> <td>CONSUMABLES</td> <td>17</td> <td>2930</td> </tr> <tr> <td>FOAM</td> <td>6</td> <td>2190</td> </tr> <tr> <th colspan="2" style="text-align:right">TOTAL</th> <th>5869.52</th> </tr> </table> <!-- Table 11 end --> <!-- Table 12 start --> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">RRP CALCULATION </td> </tr> <tr> <td STYLE="text-align: center;">MATERIAL COST + ADDITION(0)</td> <td style="text-align: center;">5869.52 </td> </tr> <tr> <td STYLE="text-align: center;">LABOUR CHARGE + ADDITION(0)</td> <td style="text-align: center;">8866.81</td> </tr> <tr> <td STYLE="text-align: center;">SUB TOTAL </td> <td style="text-align: center;">14736.33</td> </tr> <tr> <td STYLE="text-align: center;">COSTING WITH OVER HEAD</td> <td style="text-align: center;"> 0 </td> </tr> <tr> <td STYLE="text-align: center;">COSTING WITH PROFIT</td> <td style="text-align: center;"> 0 </td> </tr> <tr> <td STYLE="text-align: center;">TOTAL </td> <td style="text-align: center;"> 0 </td> </tr> </table> <!-- Table 12 end --> </td> </tr> </table> </div> </body> </html> 
