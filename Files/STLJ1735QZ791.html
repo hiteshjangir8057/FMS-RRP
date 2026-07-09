@@ -1,0 +1,64 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>FMS | RRP Cost Sheet</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet"> <style> * {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+  
+.column {
+  float: left;
+  padding: 5px;
+  width:100%;
+}
+.column-right {
+  float: right;
+  padding: 5px;
+  width:50%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 5px;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+@media  print {
+    /* Default to A4 size */
+    @page  {
+        size: A3;
+        margin: 1mm;
+    }
+
+    /* If printing to A3 */
+    /*@media  print and (min-width: 297mm) {*/
+    /*    @page  {*/
+    /*        size: A3;*/
+    /*        margin: 1mm;*/
+    /*    }*/
+    /*}*/
+} </style> </head> <body> <div style=" width : 100%; border: 1px solid #000; padding:12px;"> <h4 style="text-align: center; margin: 5px 0;">COST SHEET </h4> <!-- table 1 start --> <table style="width: 100%; border: 0px solid #fff !important;"> <tr> <td style="width: 25%; border: 0px solid #fff !important;"> <!-- table 2 start --> <table> <tbody> <tr> <th style="text-align: center;">SIDE TABLE</th> </tr> <tr> <td style="background:#fff;"> <img class="img-fluid" src="https://fms.techiesquad.in/public/image/20250201065049.jpg" alt="Card image cap" width="350" height="240" style="object-fit: scale-down;"> </td> </tr> <tr> <th style="text-align: center;">STLJ1735</th> </tr> </tbody> </table> <!-- table 2 end --> </td> <td style="width: 75%; border: 0px solid #fff !important;"> <!-- table 3 start --> <table> <tbody> <tr> <th>Model No</th> <th>STLJ1735</th> </tr> <tr> <td>PRODUCTION ID</td> <td>STLJ1735QZ791</td> </tr> <tr> <td>ITEM NAME</td> <td>SIDE TABLE</td> </tr> <tr> <td>START DATE</td> <td>20-09-2024</td> </tr> <tr> <td>DATE OF DELIVERY</td> <td>20-11-2024</td> </tr> <tr> <td>COMPLETE DATE</td> <td>17-03-2025</td> </tr> <tr> <td>QTY</td> <td>1.00</td> </tr> <tr> <td>PER UNIT </td> <td> 0 </td> </tr> <tr> <td>Customer Name</td> <td>STLJ</td> </tr> <tr> <td>Product Type</td> <td>ORDER</td> </tr> <tr> <td>Store/Dealer</td> <td>STORI</td> </tr> <tr> <td>GRADE</td> <td>SIDE TABLE</td> </tr> </tbody> </table> <!-- table 3 end --> </td> </tr> </table> <!-- table 1 end --> <!-- table 4 start --> <table> <tr> <th style="text-align: center;">MATERIAL USED</th> <th style="text-align: center;">&nbsp;</th> </tr> <tr style="background-color: #fff;"> <td> <!-- Table 5 start --> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">PLY-BOARD </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>FLEXIBLE PLY 6MM 8x4 REGULOR</td> <td>2</td> <td>993.29</td> <td>1986.58</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>1986.58</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">METAL </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>SS SQURE ROD 6x6MM</td> <td>0.75</td> <td>247</td> <td>185.25</td> </tr> <tr> <td>SS 304 6MM SHEET 8x4 JINDAL</td> <td>19.812</td> <td>239</td> <td>4735.07</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>4920.32</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">PACKING </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>Packing Tape 2&quot;</td> <td>5</td> <td>28</td> <td>140</td> </tr> <tr> <td>Masking Tape 1</td> <td>4</td> <td>17</td> <td>68</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>208</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">HARDWARE </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>HAND GLOVES</td> <td>2</td> <td>30</td> <td>60</td> </tr> <tr> <td>ROTARY BURRS CP0312 TOOLS</td> <td>1</td> <td>267.8</td> <td>267.8</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>327.8</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">CONSUMABLES  ITEMS </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>Sanding Disc_Deerfos_120 No</td> <td>45</td> <td>14</td> <td>630</td> </tr> <tr> <td>Sanding Disc_Deerfos_220 No</td> <td>55</td> <td>14</td> <td>770</td> </tr> <tr> <td>MASKING TAPE 25MM (EBRO)</td> <td>20</td> <td>25</td> <td>500</td> </tr> <tr> <td>DHOTI WHITE</td> <td>14</td> <td>17</td> <td>238</td> </tr> <tr> <td>CUTTING WHEEL 4 XTRAPOWER</td> <td>25</td> <td>9.5</td> <td>237.5</td> </tr> <tr> <td>Grinding Dis 4x80 XTRAPOWER</td> <td>27</td> <td>30</td> <td>810</td> </tr> <tr> <td>MARKER LUXOR PEN MARKER CD (OHP)</td> <td>1</td> <td>7.5</td> <td>7.5</td> </tr> <tr> <td>Flap Disc 120 No XTRAPOWER</td> <td>10</td> <td>23</td> <td>230</td> </tr> <tr> <td>CERAMIC NOZEL QUE6</td> <td>1</td> <td>55</td> <td>55</td> </tr> <tr> <td>FACE MASK</td> <td>2</td> <td>1.5</td> <td>3</td> </tr> <tr> <td>Alcon Disc 5&quot; 36 No</td> <td>10</td> <td>45</td> <td>450</td> </tr> <tr> <td>SUPER GLUE LP</td> <td>1</td> <td>23</td> <td>23</td> </tr> <tr> <td>Alcon Disc 5&quot; 80 No</td> <td>5</td> <td>39</td> <td>195</td> </tr> <tr> <td>Sanding Disc_Deerfos_320 No</td> <td>35</td> <td>14</td> <td>490</td> </tr> <tr> <td>SANDING DISC NO-400</td> <td>35</td> <td>14</td> <td>490</td> </tr> <tr> <td>SANDING DISC NO-600</td> <td>35</td> <td>14</td> <td>490</td> </tr> <tr> <td>SANDING DISC NO-800</td> <td>35</td> <td>14.5</td> <td>507.5</td> </tr> <tr> <td>SANDING DISC NO-1200</td> <td>10</td> <td>14.5</td> <td>145</td> </tr> <tr> <td>ARGON WELDING MACHINE BLACK SWITCH</td> <td>1</td> <td>45</td> <td>45</td> </tr> <tr> <td>SANDING DISC NO-1000</td> <td>10</td> <td>14.5</td> <td>145</td> </tr> <tr> <td>SCOTCH BRIGHT BIG 3M</td> <td>1</td> <td>20</td> <td>20</td> </tr> <tr> <td>WATER PAPER NO-220</td> <td>1</td> <td>16.95</td> <td>16.95</td> </tr> <tr> <td>WATER PAPER EMERY 320</td> <td>1</td> <td>13</td> <td>13</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>6511.45</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">PAINT </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>Pu Thinner (Local)</td> <td>0.5</td> <td>144</td> <td>72</td> </tr> <tr> <td>New Metlic Series Aps (M1-M4) BLACK NICCLE</td> <td>0.3</td> <td>1190.8</td> <td>357.24</td> </tr> <tr> <td>DEAD MATT MAGICO</td> <td>0.5</td> <td>949</td> <td>474.5</td> </tr> <tr> <td>THINNER 2005 SABU</td> <td>2</td> <td>235</td> <td>470</td> </tr> <tr> <td>Nc Thinner (local)</td> <td>1</td> <td>61</td> <td>61</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>1434.74</th> </tr> </table> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">PRINTING AND STATIONERY </td> </tr> <tr> <th>ITEM NAME</th> <th>QTY</th> <th>PRICE</th> <th>AMOUNT</th> </tr> <tr> <td>NATRAJ PENCILE</td> <td>1</td> <td>3.5</td> <td>3.5</td> </tr> <tr> <th colspan="3" style="text-align:right">Total</th> <th>3.5</th> </tr> </table> </td> <td style="vertical-align: top;"> <!-- Table 0010 start --> <table> <tr style="background-color: #fff;"> <th colspan="5" style="text-align: center;">LABOUR COST DEPARTMENT WISE</th> </tr> <tr> <th>DEPARTMENT</th> <th>NO.OF DAYS</th> <th>TOTAL</th> </tr> <tr> <td>METAL  POLISH</td> <td>19</td> <td>15521.05</td> </tr> <tr> <td>STRUCTURE</td> <td>9</td> <td>10891.3</td> </tr> <tr> <td>PAINT</td> <td>1.5</td> <td>1282.57</td> </tr> <tr> <td>METEL FITTER</td> <td>27</td> <td>28669</td> </tr> <tr> <td>METAL JOB WORK CHARGES</td> <td>2</td> <td>462</td> </tr> <tr> <th colspan="2" style="text-align:right">TOTAL</th> <th>56825.92</th> </tr> </table> <!-- Table 0010 end --> <!-- Table 10 start --> <table style="margin-top: 20px";> <tr style="background-color: #fff;"> <th colspan="5" style="text-align: center;">LABOUR COST </th> </tr> <tr> <th>DEPARTMENT</th> <th>TEAM</th> <th>PAY PER DAY</th> <th>NO. OF DAYS</th> <th>TOTAL</th> </tr> <tr> <td>METEL FITTER</td> <td>MUKESH KUMAR-574</td> <td>782.00</td> <td>12.5</td> <td>9775</td> </tr> <tr> <td>METEL FITTER</td> <td>SHANKAR PAHARI-572</td> <td>1348.00</td> <td>12.5</td> <td>16850</td> </tr> <tr> <td>STRUCTURE</td> <td>MANOJ SHARMA-597</td> <td>1565.21</td> <td>3.5</td> <td>5478.24</td> </tr> <tr> <td>STRUCTURE</td> <td>ROSHAN KUMAR-505</td> <td>1087.00</td> <td>1.5</td> <td>1630.5</td> </tr> <tr> <td>STRUCTURE</td> <td>JITENDRA THAKUR-636</td> <td>956.52</td> <td>3</td> <td>2869.56</td> </tr> <tr> <td>METAL  POLISH</td> <td>CHOTTAN KUMAR-803</td> <td> 1000.00 | 1043.00 </td> <td>6.5</td> <td>6521.5</td> </tr> <tr> <td>METAL  POLISH</td> <td>SANDEEP YADAV-769</td> <td>565.21</td> <td>3.5</td> <td>1978.24</td> </tr> <tr> <td>STRUCTURE</td> <td>DAYA SHARMA-521</td> <td>913.00</td> <td>1</td> <td>913</td> </tr> <tr> <td>METEL FITTER</td> <td>BANTI-250</td> <td>1261.00</td> <td>1</td> <td>1261</td> </tr> <tr> <td>METEL FITTER</td> <td>IDRIS-590</td> <td>783.00</td> <td>1</td> <td>783</td> </tr> <tr> <td>METAL  POLISH</td> <td>BABU-809</td> <td> 565.21 | 565.00 </td> <td>4</td> <td>2260.53</td> </tr> <tr> <td>METAL JOB WORK CHARGES</td> <td>METAL JOB WORK</td> <td> 322.00 | 140.00 </td> <td>2</td> <td>462</td> </tr> <tr> <td>METAL  POLISH</td> <td>SURJEET-427</td> <td>1174.00</td> <td>1.5</td> <td>1761</td> </tr> <tr> <td>METAL  POLISH</td> <td>ASHOK KUMAR-267</td> <td>1130.00</td> <td>1</td> <td>1130</td> </tr> <tr> <td>METAL  POLISH</td> <td>SHAHBAJ ALAM-807</td> <td>826.08</td> <td>1</td> <td>826.08</td> </tr> <tr> <td>PAINT</td> <td>NARENDRA KUMAR-611</td> <td>869.57</td> <td>1</td> <td>869.57</td> </tr> <tr> <td>PAINT</td> <td>MANISH-32</td> <td>826.00</td> <td>0.5</td> <td>413</td> </tr> <tr> <td>METAL  POLISH</td> <td>RATNESH-496</td> <td>957.00</td> <td>0.5</td> <td>478.5</td> </tr> <tr> <td>METAL  POLISH</td> <td>BABUL KUMAR-717</td> <td>565.21</td> <td>0.5</td> <td>282.61</td> </tr> <tr> <td>METAL  POLISH</td> <td>DINANATH KUMAR-802</td> <td>565.21</td> <td>0.5</td> <td>282.61</td> </tr> <tr> <th colspan="4" style="text-align:right">TOTAL</th> <th>56825.92</th> </tr> </table> <!-- Table 10 end --> <!-- Table 11 start --> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">MATERIAL COST </td> </tr> <tr> <th>CATEGORY</th> <th>QTY</th> <th>AMOUNT</th> </tr> <tr> <td>CONSUMABLES</td> <td>380</td> <td>6511</td> </tr> <tr> <td>PACKING MATERIAL</td> <td>9</td> <td>208</td> </tr> <tr> <td>HARDWARE</td> <td>2</td> <td>60</td> </tr> <tr> <td>METAL</td> <td>20.562</td> <td>4920</td> </tr> <tr> <td>PLY-BOARD</td> <td>2</td> <td>1987</td> </tr> <tr> <td>PRINTING AND STATIONERY</td> <td>1</td> <td>4</td> </tr> <tr> <td>TOOLS</td> <td>1</td> <td>268</td> </tr> <tr> <td>PAINT</td> <td>4.3</td> <td>1435</td> </tr> <tr> <th colspan="2" style="text-align:right">TOTAL</th> <th>15392.39</th> </tr> </table> <!-- Table 11 end --> <!-- Table 12 start --> <table style="margin-top: 20px";> <tr> <th colspan="4" style="text-align: center; background-color: #FFF;">RRP CALCULATION </td> </tr> <tr> <td STYLE="text-align: center;">MATERIAL COST + ADDITION(0)</td> <td style="text-align: center;">15392.39 </td> </tr> <tr> <td STYLE="text-align: center;">LABOUR CHARGE + ADDITION(0)</td> <td style="text-align: center;">56825.92</td> </tr> <tr> <td STYLE="text-align: center;">SUB TOTAL </td> <td style="text-align: center;">72218.3</td> </tr> <tr> <td STYLE="text-align: center;">COSTING WITH OVER HEAD</td> <td style="text-align: center;"> 0 </td> </tr> <tr> <td STYLE="text-align: center;">COSTING WITH PROFIT</td> <td style="text-align: center;"> 0 </td> </tr> <tr> <td STYLE="text-align: center;">TOTAL </td> <td style="text-align: center;"> 0 </td> </tr> </table> <!-- Table 12 end --> </td> </tr> </table> </div> </body> </html> 
